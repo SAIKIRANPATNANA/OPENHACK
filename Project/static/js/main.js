@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const loader = document.getElementById('loader');
     const resultsSection = document.querySelector('.results-section');
     let currentReport = null;
+    let sessionId = 'chat1';  // Consistent with the notebook implementation
 
     // Tab switching
     document.querySelectorAll('.tab-btn').forEach(button => {
@@ -84,33 +85,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const role = roleSelect.value;
 
-        // Disable input and button while processing
         messageInput.disabled = true;
         sendButton.disabled = true;
 
-        // Show user message immediately
         appendMessage('You', message);
         messageInput.value = '';
 
-        // Add typing indicator
         const typingIndicator = appendTypingIndicator();
 
         try {
+            console.log('Sending request with:', {
+                message,
+                role,
+                report: currentReport,
+                session_id: sessionId
+            });
+
             const response = await fetch('/chat', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
                 },
                 body: JSON.stringify({
                     message,
                     role,
-                    report: currentReport
+                    report: currentReport,
+                    session_id: sessionId
                 })
             });
 
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+
             const data = await response.json();
+            console.log('Received response:', data);
             
-            // Remove typing indicator
             typingIndicator.remove();
 
             if (data.error) {
@@ -120,11 +131,10 @@ document.addEventListener('DOMContentLoaded', function() {
             appendMessage('Assistant', data.response);
             
         } catch (error) {
-            // Remove typing indicator
+            console.error('Chat error:', error);
             typingIndicator.remove();
-            appendMessage('System', `Error: ${error.message}`);
+            appendMessage('System', `Error: ${error.message}. Please try again.`);
         } finally {
-            // Re-enable input and button
             messageInput.disabled = false;
             sendButton.disabled = false;
             messageInput.focus();

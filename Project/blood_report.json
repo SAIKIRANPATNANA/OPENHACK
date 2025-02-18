@@ -1,0 +1,126 @@
+{
+  "lab_info": {
+    "generated_on": "31/08/2023 09:10 PM",
+    "instruments": "",
+    "lab_address": "",
+    "lab_contact": {
+      "email": "",
+      "phone": "[...]"
+    },
+    "lab_name": "Flabs",
+    "website": ""
+  },
+  "lab_results": {
+    "Basophils": {
+      "reference_range": "0 - 1",
+      "status": "Normal",
+      "unit": "%",
+      "value": "0"
+    },
+    "Eosinophils": {
+      "reference_range": "0 - 6",
+      "status": "Normal",
+      "unit": "%",
+      "value": "1"
+    },
+    "Leucocytes(WBC)": {
+      "reference_range": "4.0 - 11",
+      "status": "High",
+      "unit": "10^3/uL",
+      "value": "72"
+    },
+    "Lymphocytes": {
+      "reference_range": "20 - 50",
+      "status": "Normal",
+      "unit": "%",
+      "value": "42"
+    },
+    "MCH": {
+      "reference_range": "27 - 33",
+      "status": "Normal",
+      "unit": "pg",
+      "value": "30.00"
+    },
+    "MCHC": {
+      "reference_range": "32 - 36",
+      "status": "Normal",
+      "unit": "g/dL",
+      "value": "33.30"
+    },
+    "MCV": {
+      "reference_range": "87 - 108",
+      "status": "Normal",
+      "unit": "fL",
+      "value": "90.00"
+    },
+    "MPV": {
+      "reference_range": "7.5 - 11.5",
+      "status": "Normal",
+      "unit": "fL",
+      "value": "8"
+    },
+    "Monocytes": {
+      "reference_range": "2 - 10",
+      "status": "Low",
+      "unit": "%",
+      "value": "1"
+    },
+    "Neutrophils": {
+      "reference_range": "40 - 80",
+      "status": "Normal",
+      "unit": "%",
+      "value": "56"
+    },
+    "P-LCR": {
+      "reference_range": "",
+      "status": "Normal",
+      "unit": "",
+      "value": "6"
+    },
+    "PCT": {
+      "reference_range": "",
+      "status": "Normal",
+      "unit": "",
+      "value": "0.28"
+    },
+    "Platelets Count": {
+      "reference_range": "150000 - 400000",
+      "status": "Not Available",
+      "unit": "counts",
+      "value": "[...]"
+    },
+    "RDW-CV": {
+      "reference_range": "11.5 - 14.5",
+      "status": "High",
+      "unit": "%",
+      "value": "17.30"
+    },
+    "RDW-SD": {
+      "reference_range": "40 - 48",
+      "status": "Normal",
+      "unit": "fL",
+      "value": "42"
+    }
+  },
+  "medical_personnel": {
+    "medical_lab_technician": "",
+    "pathologists": [
+      {
+        "name": "",
+        "qualification": ""
+      }
+    ]
+  },
+  "patient_info": {
+    "age": "30",
+    "collected_on": "31/08/2023 08:50 PM",
+    "gender": "Male",
+    "name": "Mr Dummy",
+    "patient_id": "PRC",
+    "referred_by": "Sat",
+    "registered_on": "",
+    "reported_on": "31/08/2023 09:10 PM",
+    "sample_collected_at": ""
+  },
+  "test_name": "COMPLETE BLOOD COUNT (CBC)"
+}
