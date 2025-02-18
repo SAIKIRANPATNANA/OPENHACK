@@ -2,6 +2,10 @@ from flask import Flask, render_template, request, jsonify
 import helper
 import os
 import json
+## Langsmith Tracking
+os.environ["LANGCHAIN_API_KEY"]= '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'
+os.environ["LANGCHAIN_TRACING_V2"]="true"
+os.environ["LANGCHAIN_PROJECT"]="default"
 from langchain_groq import ChatGroq
 from langchain_core.messages import HumanMessage
 from langchain_community.chat_message_histories import ChatMessageHistory

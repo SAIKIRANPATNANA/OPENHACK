@@ -458,4 +458,59 @@ button:hover {
     .plots-container {
         grid-template-columns: 1fr;
     }
+}
+
+/* Add these styles to your existing CSS file */
+
+.report-tables {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.table-section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.table-section h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.results-table td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.results-table td:first-child {
+    width: 200px;
+    background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (min-width: 1024px) {
+    .report-tables {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .table-section:last-child {
+        grid-column: 1 / -1;
+    }
 } 
