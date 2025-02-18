@@ -1,0 +1,94 @@
+{
+  "lab_info": {
+    "generated_on": "02 Dec, 202X 05:00 PM",
+    "instruments": "Fully automated cell counter - Mindray 300",
+    "lab_address": "105-108, Smart Vision Complex, Healthcare Road, opposite Healthcare Complex. Mumbai - 689578",
+    "lab_contact": {
+      "email": "drlogypathlab@drlogy.com",
+      "phone": "0123456789"
+    },
+    "lab_name": "Smart Pathology Laboratory",
+    "website": "www.drlogy.com"
+  },
+  "lab_results": {
+    "Basophils": {
+      "reference_range": "00 - 02",
+      "status": "Normal",
+      "unit": "%",
+      "value": "1"
+    },
+    "Eosinophils": {
+      "reference_range": "00 - 06",
+      "status": "Normal",
+      "unit": "%",
+      "value": "1"
+    },
+    "Hemoglobin (Hb)": {
+      "reference_range": "13.0 - 17.0",
+      "status": "Low",
+      "unit": "g/dL",
+      "value": "12.5"
+    },
+    "Lymphocytes": {
+      "reference_range": "20 - 40",
+      "status": "Normal",
+      "unit": "%",
+      "value": "31"
+    },
+    "Monocytes": {
+      "reference_range": "00 - 10",
+      "status": "Normal",
+      "unit": "%",
+      "value": "7"
+    },
+    "Neutrophils": {
+      "reference_range": "50 - 62",
+      "status": "Normal",
+      "unit": "%",
+      "value": "60"
+    },
+    "Platelet Count": {
+      "reference_range": "150000 - 410000",
+      "status": "Borderline",
+      "unit": "cumm",
+      "value": "150000"
+    },
+    "Total RBC count": {
+      "reference_range": "4.5 - 5.5",
+      "status": "Normal",
+      "unit": "mill/cumm",
+      "value": "5.2"
+    },
+    "Total WBC count": {
+      "reference_range": "4000-11000",
+      "status": "Normal",
+      "unit": "cumm",
+      "value": "9000"
+    }
+  },
+  "medical_personnel": {
+    "medical_lab_technician": "Medical Lab Technician (DMLT, BMLT)",
+    "pathologists": [
+      {
+        "name": "Dr. Vimal Shah",
+        "qualification": "MD, Pathologist"
+      },
+      {
+        "name": "Dr. Payal Shah",
+        "qualification": "MD, Pathologist"
+      }
+    ]
+  },
+  "patient_info": {
+    "age": "21 Years",
+    "collected_on": "03:11 PM 02 Dec, 2X",
+    "gender": "Male",
+    "name": "Yash M. Patel",
+    "patient_id": "555",
+    "referred_by": "Dr. Hiren Shah",
+    "registered_on": "02:31 PM 02 Dec, 2X",
+    "reported_on": "04:35 PM 02 Dec, 2X",
+    "sample_collected_at": "125, Shivam Bungalow, S G Road, Mumbai"
+  },
+  "test_name": "Complete Blood Count (CBC)"
+}

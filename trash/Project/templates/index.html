@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Report Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blood Report Analyzer</h1>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>Upload Blood Report</h2>
+                <form id="uploadForm">
+                    <input type="file" id="reportFile" accept=".pdf,.jpg,.jpeg,.png" required>
+                    <button type="submit">Analyze Report</button>
+                </form>
+            </section>
+
+            <section class="results-section" style="display: none;">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="report">Report</button>
+                    <button class="tab-btn" data-tab="plots">Plots</button>
+                    <button class="tab-btn" data-tab="insights">Insights</button>
+                    <button class="tab-btn" data-tab="chat">Chat</button>
+                </div>
+
+                <div id="report" class="tab-content active">
+                    <h3>Report Details</h3>
+                    <div id="reportContent"></div>
+                </div>
+
+                <div id="plots" class="tab-content">
+                    <h3>Abnormal Parameters</h3>
+                    <div id="plotsContent"></div>
+                </div>
+
+                <div id="insights" class="tab-content">
+                    <h3>Medical Insights</h3>
+                    <div id="insightsContent"></div>
+                </div>
+
+                <div id="chat" class="tab-content">
+                    <h3>Chat with Assistant</h3>
+                    <div class="role-selector">
+                        <label>I am a:</label>
+                        <select id="roleSelect">
+                            <option value="patient">Patient</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+                    <div id="chatMessages"></div>
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" placeholder="Type your message...">
+                        <button id="sendMessage">Send</button>
+                    </div>
+                </div>
+            </section>
+
+            <div id="loader" style="display: none;">
+                <div class="spinner"></div>
+                <p>Analyzing report...</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 

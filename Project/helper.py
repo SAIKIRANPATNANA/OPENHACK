@@ -5,10 +5,6 @@ import cv2
 import numpy as np
 import io,os
 import json
-## Langsmith Tracking
-os.environ["LANGCHAIN_API_KEY"]= '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'
-os.environ["LANGCHAIN_TRACING_V2"]="true"
-os.environ["LANGCHAIN_PROJECT"]="default"
 import google.generativeai as genai
 genai.configure(api_key='AIzaSyAFTm-mUcFxAakOw_qks3luweKHLmGhNlQ')
 from langchain_community.document_loaders import PyPDFLoader
@@ -190,7 +186,12 @@ def create_blood_test_plots(parsed_report, output_folder="static/plots"):
     try:
         os.makedirs(output_folder, exist_ok=True)
 
-        blood_results = parsed_report.lab_results
+        # Convert Pydantic model to dictionary
+        if hasattr(parsed_report, 'dict'):
+            blood_results = parsed_report.dict()['lab_results']
+        else:
+            blood_results = parsed_report.lab_results
+
         abnormal_params = {k: v for k, v in blood_results.items() if v['status'] != 'Normal'}
 
         for param, details in abnormal_params.items():
@@ -338,6 +339,7 @@ def create_blood_test_plots(parsed_report, output_folder="static/plots"):
 
     except Exception as e:
         print(f"Error in create_blood_test_plots: {str(e)}")
+        raise Exception(f"Failed to create plots: {str(e)}")
 
 def get_medical_insights_n_recommendataions(parsed_report):
   class ParameterRecommendation(BaseModel):
@@ -357,8 +359,6 @@ def get_medical_insights_n_recommendataions(parsed_report):
       Generates insights & recommendations for all abnormal blood parameters in a single call.
       """
       formatted_params = "\n".join([f"- {param}: {status}" for param, status in abnormal_results.items()])
-      if(not len(formatted_params)):
-        return {}
       prompt_template = f"""
       The following blood test parameters are abnormal:
       {formatted_params}

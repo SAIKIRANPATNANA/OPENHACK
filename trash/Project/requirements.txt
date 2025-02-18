@@ -1,0 +1,15 @@
+flask
+pytesseract
+Pillow
+opencv-python
+numpy
+google-generativeai
+langchain-community
+langchain-groq
+langchain-core
+langchain-huggingface
+pypdf
+pydantic
+matplotlib
+seaborn
+python-dotenv

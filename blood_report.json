@@ -1,0 +1,114 @@
+{
+  "lab_info": {
+    "generated_on": "17/10/2024",
+    "instruments": "",
+    "lab_address": "",
+    "lab_contact": {
+      "email": "",
+      "phone": ""
+    },
+    "lab_name": "",
+    "website": ""
+  },
+  "lab_results": {
+    "Basophils": {
+      "reference_range": "< 2",
+      "status": "Normal",
+      "unit": "%",
+      "value": "1"
+    },
+    "Eosinophils": {
+      "reference_range": "1 - 6",
+      "status": "Normal",
+      "unit": "%",
+      "value": "1"
+    },
+    "Hematocrit Value (HCT)": {
+      "reference_range": "40 - 50",
+      "status": "Normal",
+      "unit": "%",
+      "value": "42"
+    },
+    "Hemoglobin": {
+      "reference_range": "13 - 17",
+      "status": "Normal",
+      "unit": "g/dl",
+      "value": "15"
+    },
+    "Lymphocytes": {
+      "reference_range": "20 - 40",
+      "status": "Low",
+      "unit": "%",
+      "value": "18"
+    },
+    "Mean Cell Hemoglobin (MCH)": {
+      "reference_range": "27 - 32",
+      "status": "Normal",
+      "unit": "Pg",
+      "value": "30.0"
+    },
+    "Mean Cell Hemoglobin Con. (MCHC)": {
+      "reference_range": "31.5 - 34.5",
+      "status": "Normal",
+      "unit": "%",
+      "value": "35.7"
+    },
+    "Mean Corpuscular Volume (MCV)": {
+      "reference_range": "83 - 101",
+      "status": "Normal",
+      "unit": "fL",
+      "value": "84.0"
+    },
+    "Monocytes": {
+      "reference_range": "2 - 10",
+      "status": "Low",
+      "unit": "%",
+      "value": "1"
+    },
+    "Neutrophils": {
+      "reference_range": "40 - 80",
+      "status": "Normal",
+      "unit": "%",
+      "value": "79"
+    },
+    "Platelet Count": {
+      "reference_range": "1.5 - 4.1",
+      "status": "Normal",
+      "unit": "lakhs/cumm",
+      "value": "3.5"
+    },
+    "Total Leukocyte Count": {
+      "reference_range": "4,800 - 10,800",
+      "status": "Normal",
+      "unit": "cumm",
+      "value": "5,100"
+    },
+    "Total RBC Count": {
+      "reference_range": "4.5 - 5.5",
+      "status": "Normal",
+      "unit": "million/cumm",
+      "value": "5"
+    }
+  },
+  "medical_personnel": {
+    "medical_lab_technician": "",
+    "pathologists": [
+      {
+        "name": "Dr. A. K. Asthana",
+        "qualification": "MBBS, MD Pathologist"
+      }
+    ]
+  },
+  "patient_info": {
+    "age": "27 years",
+    "collected_on": "17/10/2024",
+    "gender": "Male",
+    "name": "Mr. Saubhik Bhaumik",
+    "patient_id": "1001",
+    "referred_by": "",
+    "registered_on": "",
+    "reported_on": "17/10/2024",
+    "sample_collected_at": ""
+  },
+  "test_name": "Complete Blood Count (CBC)"
+}
